@@ -81,7 +81,7 @@ def upload_data(host, dbname, user, password, file_name):
                 } for row in reader
             ]
 
-            print("Dne filtering data")
+            print("Done filtering data")
 
             print("Inserting Data...")
 
