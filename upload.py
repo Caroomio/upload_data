@@ -59,10 +59,10 @@ def upload_data(host, dbname, user, password, file_name):
         def transform_josn(data):
             data = json.loads(data)
             makes = data['makes']
-            makes_ = {'listing_count': data['listing_count']}
+            makes_ = {'listing_count': data['listing_count'], "carMake": {}}
             for make, value in makes.items():
                 make_value = int(round(value / 100 * data['listing_count'], 0))
-                makes_.update({make.lower(): make_value})
+                makes_['carMake'].update({make.lower(): make_value})
 
             return makes_
 
